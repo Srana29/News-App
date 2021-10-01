@@ -21,25 +21,25 @@ class _CategoryState extends State<Category> {
 
   getNewsByQuery(String query) async {
     String url="";
+    Strinh apikey = "Get your api key from newapi.org";
 
     if(query=="Top News"){
-       url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=41dd062857f9477ebc0ebe295c896f32";
+       url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=$apikey";
 
     }else if(query=="India"){
-      url="https://newsapi.org/v2/top-headlines?country=in&apiKey=41dd062857f9477ebc0ebe295c896f32";
+      url="https://newsapi.org/v2/top-headlines?country=in&apiKey=$apikey";
     }else  if (query=="Finance"){
-       url = "https://newsapi.org/v2/everything?q=finance&from=2021-09-13&to=2021-09-13&sortBy=popularity&apiKey=41dd062857f9477ebc0ebe295c896f32";
+       url = "https://newsapi.org/v2/everything?q=finance&from=2021-09-13&to=2021-09-13&sortBy=popularity&apiKey=$apikey";
     }else if(query=="Politics"){
-      url="https://newsapi.org/v2/everything?q=politics&from=2021-09-13&to=2021-09-13&sortBy=popularity&apiKey=41dd062857f9477ebc0ebe295c896f32";
+      url="https://newsapi.org/v2/everything?q=politics&from=2021-09-13&to=2021-09-13&sortBy=popularity&apiKey=$apikey";
     } else if(query=="Sports"){
       url="https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=41dd062857f9477ebc0ebe295c896f32";
     }else if(query=="Entertainment"){
-      url="https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=41dd062857f9477ebc0ebe295c896f32";
+      url="https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=$apikey";
     }else if(query=="LATEST NEWS"){
-      url="https://newsapi.org/v2/everything?domains=aajtak.in&apiKey=41dd062857f9477ebc0ebe295c896f32";
-      //url="https://newsapi.org/v2/top-headlines?country=in&apiKey=41dd062857f9477ebc0ebe295c896f32";
+      url="https://newsapi.org/v2/everything?domains=aajtak.in&apiKey=$apikey";
     }else{
-      url="https://newsapi.org/v2/everything?q=$query&from=2021-09-13&to=2021-09-13&sortBy=popularity&apiKey=41dd062857f9477ebc0ebe295c896f32";
+      url="https://newsapi.org/v2/everything?q=$query&from=2021-09-13&to=2021-09-13&sortBy=popularity&apiKey=$apikey";
     }
 
 
