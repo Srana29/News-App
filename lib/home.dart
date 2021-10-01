@@ -24,13 +24,13 @@ class _HomeState extends State<Home> {
     "Politics",
     "Entertainment"
   ];
-
+  String apikey = "Get your api key from newsapi.org";
   bool isLoading = true;
   getNewsByQuery(String query) async {
     Map element;
     int i=0;
     String url =
-        "https://newsapi.org/v2/everything?domains=$query&apiKey=41dd062857f9477ebc0ebe295c896f32";
+        "https://newsapi.org/v2/everything?domains=$query&apiKey=$apikey";
     Response response = await get(Uri.parse(url));
     Map data = jsonDecode(response.body);
     setState(() {
@@ -61,7 +61,7 @@ class _HomeState extends State<Home> {
   getNewsofIndia() async {
     Map element;
     int i=0;
-    String url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=41dd062857f9477ebc0ebe295c896f32";
+    String url = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=$apikey";
     Response response = await get(Uri.parse(url));
     Map data = jsonDecode(response.body);
     setState(() {
