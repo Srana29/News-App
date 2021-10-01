@@ -33,7 +33,7 @@ class _CategoryState extends State<Category> {
     }else if(query=="Politics"){
       url="https://newsapi.org/v2/everything?q=politics&from=2021-09-13&to=2021-09-13&sortBy=popularity&apiKey=$apikey";
     } else if(query=="Sports"){
-      url="https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=41dd062857f9477ebc0ebe295c896f32";
+      url="https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=$apikey";
     }else if(query=="Entertainment"){
       url="https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=$apikey";
     }else if(query=="LATEST NEWS"){
